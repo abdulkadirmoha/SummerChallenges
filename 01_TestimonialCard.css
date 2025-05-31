@@ -1,78 +1,80 @@
-* {
+*{
     margin: 0;
     padding: 0;
-}
-body{
     font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    color: #334155
+    color: #334155;
 }
-.container{
-    margin: auto;
-    background-color: #334155;
-    min-width: 230px;
-    max-width: 315px;
-    width: 100%;
-    margin: 10px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 30px;
-    background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
 
+.container{
+    max-width: 315px;
+    min-width: 230px;
+    width: 100%;
+    background-color: #334155;
+    padding: 30px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-image: linear-gradient(-25deg, rgba(0 0 0 0.2)0%, rgba(255 255 0.1)100%);
 }
 .profile{
-  width: 100px;
-  border-radius: 50%;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
-  margin-bottom: 10px;
-  border: solid 5px #A6A57A;
-}
-.quote-container{
-    font-size: 1rem;
-    font-weight: medium;
-    padding: 45px 20px 40px 50px;
-    background-color: white;
-    margin-top: 10px;
-    border-radius: 5px;
-    box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
-    text-align: left;
-    position: relative;
-}
-.quote-container:before{
-    font-family: 'FontAwesome';
-    content: "\201C";
-    position: absolute;
-    font-size: 70px;
-    opacity: 0.25;
-    top: 0;
-    left: 20px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 3px 4px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0px;
+    border: 5px solid #a6a57a
 }
 .caption{
     padding-top: 10px;
 }
-.caption-name{
-    color:aliceblue
+.caption h2{
+    color: aliceblue;
 }
-.caption-title{
-    color: #a6a6a6;
+.caption h4{
+    color: #a6a57a;
+}
+.quote-container{
+    font-size: 1.1rem;
+    font-weight: medium;
+    padding: 35px 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    position: relative;
+}
+.quote-container::before{
+    font-family: 'FontAwesome';
+    content: "\201C";
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 70px;
+    opacity: 0.25;
 }
 
-@media screen and (min-width:600px){
+@media screen and (min-width:600px) {
     .flex-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8;
+    }
 }
-}
-
-@media screen and (min-width:800px){
+@media screen and (min-width:800px) {
     .flex-container{
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    gap: 4px;
-    justify-content: center;
-    justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+    }
+    
 }
+@media screen and (min-width:1200px) {
+    .flex-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 4px;
+    }
+    
 }
