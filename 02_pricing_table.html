@@ -11,7 +11,15 @@
 </head>
 <body>
   <section class="pricing-section">
-
+    <div class="pricing-toggle">
+      <span>Monthly</span>
+      <label class="switch">
+        <input type="checkbox" id="price-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span>Annoully</span>
+    </div>
+    <div class="pricing-plans-container">
   <!-- Starter Plan -->
   <section class="pricing-plan">
     <div class="pricing-plan__header">
@@ -26,10 +34,10 @@
       </ul>
     </div>
     <div class="pricing-action">
-      <p class="price-plan-cost">$29</p>
+      <div class="price-plan-cost">€ <span class="starter-cost">19.99</span></div>
       <p class="price-plan-text">Per month, billed monthly</p>
       <a href="#" class="price-plan-button">Get Started</a>
-      <p class="price-plan-text">No long-term commitment</p>
+      <p class="price-plan-note">No long-term commitment</p>
     </div>
   </section>
 
@@ -49,10 +57,10 @@
       </ul>
     </div>
     <div class="pricing-action">
-      <p class="price-plan-cost">$79</p>
+      <div class="price-plan-cost">€ <span class="pro-cost">24.99</span></div>
       <p class="price-plan-text">Per month, billed monthly</p>
       <a href="#" class="price-plan-button">Upgrade to Pro</a>
-      <p class="price-plan-text">Cancel anytime</p>
+      <p class="price-plan-note">Cancel anytime</p>
     </div>
   </section>
 
@@ -71,14 +79,14 @@
       </ul>
     </div>
     <div class="pricing-action">
-      <p class="price-plan-cost">$199</p>
+      <div class="price-plan-cost">€ <span class="business-cost">39.99</span></div>
       <p class="price-plan-text">Per month, billed monthly</p>
       <a href="#" class="price-plan-button">Contact Sales</a>
-      <p class="price-plan-text">Custom billing options available</p>
+      <p class="price-plan-note">Custom billing options available</p>
     </div>
   </section>
-
+</div>
 </section>
-
+<script src="product.js"></script>
 </body>
 </html>
