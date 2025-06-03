@@ -1,86 +1,208 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
-.logo{
-    max-width: 150px;
-    cursor: pointer;
+.header {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  box-shadow: 1px 2px 5px rgb(0 0 0 / 10%);
+  position: sticky;
+  top: 0;
 }
-.header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding:30px 10px;
-    background-color: black;
+.header__logo{
+  width: 150px;
 }
-.nav-link{
-    list-style: none;
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.nav-list{
-    display: inline-block;
-    padding: 0 25px;
-    color: white;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    
+.header__nav { 
+  display: flex;
+  justify-content: center;
 }
-.nav-link li{
-
-    cursor: pointer;
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  list-style: none;
+  padding: 0;
+  margin: 0; 
 }
-.contact-btt,
-button{
+.header__nav-item {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+}
+.header__nav-item:hover {
+  color: #1f2937;
+  transform:  translateY(-2px);
+}
+.contact-btt button{
   border: none;
 }
-button{
-    font-size: 15px;
-    padding: 9px 20px;
-    border-radius: 50px;
-    background-color: darkred;
-    color: white;
-    cursor: pointer;
+button {
+  font-size: 18px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  background-color: #7c3aed;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 button:hover{
-    background: rgb(184, 9, 9);
-    transition: all 0.3s ease 0s;
+  background-color: #6d28d9;
+  transform: translateY(-2px);
 }
 
 .hamburger {
   display: none;
-  font-size: 30px;
-  color: white;
+  font-size: 32px;
+  color: #1f2937;
   cursor: pointer;
-  margin-left: auto;
 }
-@media (max-width: 768px) {
-  .nav-bar {
+/* --- Hero Section Styles --- */
+.hero__section {
+  box-sizing: border-box;
+  background-color: #f3f4f6;
+  padding: 40px 0; /* AI Generated: Add vertical padding for spacing around the content */
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column; /* AI Generated: Default to column layout for mobile-first approach */
+  justify-content: center; /* AI Generated: Center items vertically when stacked */
+  align-items: center; /* AI Generated: Center items horizontally when stacked */
+  min-height: 80vh; /* AI Generated: Use viewport height for hero, adjust as needed */
+  max-width: 1200px; /* AI Generated: Limit max width of the container on large screens */
+  margin: 0 auto; /* AI Generated: Center the container horizontally */
+  padding: 20px; /* AI Generated: Add padding inside the container for smaller screens */
+  gap: 30px; /* AI Generated: Add gap between content and image on mobile/tablet */
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* AI Generated: Center content horizontally on mobile */
+  text-align: center; /* AI Generated: Center text on mobile */
+  flex: 1; /* AI Generated: Allow content to grow/shrink in flex layout */
+  padding: 0 15px; /* AI Generated: Add some horizontal padding to content */
+}
+
+.hero__titel { /* Corrected typo: titel -> title if HTML is also changed, otherwise leave as is */
+  font-family: 'Poppins', sans-serif; /* AI Generated: Specify font-family */
+  font-size: 40px; /* AI Generated: Adjusted for better mobile scaling */
+  line-height: 1.2; /* AI Generated: Improved line height for readability */
+  font-weight: bold;
+  color: #314259;
+  margin-bottom: 15px; /* AI Generated: Space below title */
+}
+
+.hero__subtitle {
+  font-size: 16px;
+  line-height: 1.5; /* AI Generated: Improved line height */
+  font-weight: normal;
+  color: #787878;
+  opacity: 1;
+  margin-bottom: 30px; /* AI Generated: Space below subtitle */
+  max-width: 600px; /* AI Generated: Limit width of paragraph for readability */
+}
+
+.hero__image-wrapper {
+    display: flex; /* AI Generated: Use flex to center image */
+    justify-content: center; /* AI Generated: Center image horizontally */
+    align-items: center; /* AI Generated: Center image vertically */
+    flex: 1; /* AI Generated: Allow image wrapper to grow/shrink */
+    width: 100%; /* AI Generated: Ensure wrapper takes full width on mobile */
+}
+
+.hero__image {
+  height: auto; /* AI Generated: Use auto to maintain aspect ratio */
+  max-width: 100%; /* AI Generated: Ensure image scales down on smaller screens */
+  display: block; /* AI Generated: Removes extra space below image */
+  /* height: 340px; <- This will fix the height, potentially distorting smaller images or
+                      making larger ones not scale. max-width/height:auto is usually better.
+                      If you want to enforce a max height, use `max-height: 340px;` */
+  max-height: 340px; /* AI Generated: Ensures image doesn't get too tall */
+}
+
+/* AI Generated: Call to Action Button Styles */
+.hero__cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #7c3aed; /* Example purple */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.hero__cta-button:hover {
+  background-color: #6d28d9; /* Darker purple on hover */
+  transform: translateY(-2px);
+}
+
+/* --- Media Queries for Desktop Layout --- */
+@media screen and (min-width: 768px) {
+  .hero__container {
+    flex-direction: row; /* AI Generated: Switch to row layout for desktop */
+    text-align: left; /* AI Generated: Reset text alignment for desktop */
+    justify-content: space-between; /* AI Generated: Space out content and image */
+    align-items: center; /* AI Generated: Vertically align items in the middle */
+    padding: 40px 20px; /* AI Generated: Adjust padding for desktop */
+  }
+
+  .hero__content {
+    align-items: flex-start; /* AI Generated: Align content to the left */
+    text-align: left; /* AI Generated: Left align text for desktop */
+    padding-right: 30px; /* AI Generated: Add space between text and image */
+  }
+
+  .hero__titel {
+    font-size: 54px; /* AI Generated: Desktop font size for title */
+    line-height: 1.2;
+    margin-bottom: 20px; /* AI Generated: Adjust space below title */
+  }
+
+  .hero__subtitle {
+    margin-right: 0; /* AI Generated: Remove margin-right from original code, now handled by padding-right on content */
+    margin-bottom: 30px; /* AI Generated: Space below subtitle */
+  }
+
+  .hero__image-wrapper {
+      padding-left: 30px; /* AI Generated: Add space between content and image */
+  }
+}
+@media screen and (max-width:768px) {
+  .header__nav-list {
     display: none;
-    width: 100%;
-    text-align: center;
   }
-
-  .nav-bar.active {
-    display: block;
+  .contact-btt{
+    display: none;
   }
-
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    max-width: none;
+    margin: 0;
+  }
+  .header__nav {
+    display: none;
+  }
   .hamburger {
     display: block;
-  }
-
-  .nav-link {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .header {
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-  }
-
-  .contact-btt {
-    display: none;
   }
 }
