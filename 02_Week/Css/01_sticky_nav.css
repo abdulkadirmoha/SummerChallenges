@@ -16,10 +16,11 @@
   --primary-hover: #8b5cf6;
   --button-text: #1f2937;
 }
-#theme-switch {
-  height: 50px;
+ #theme-switch {
   width: 50px;
+  height: 50px;
   padding: 0;
+  border-radius: 50%;
   border: none;
   background-color: var(--primary-color);
   display: flex;
@@ -29,19 +30,16 @@
   top: 120px;
   right: 10px;
   z-index: 1000;
-}
-#theme-switch img {
-  fill: var(--base-color);
-}
-#theme-switch img:last-child{
+ }
+ #theme-switch img:last-child {
   display: none;
-}
-.darkmode #theme-switch img:first-child {
+ }
+ .darkmode #theme-switch img:first-child {
   display: none;
-}
-.darkmode #theme-switch img:last-child{
+ }
+ .darkmode #theme-switch img:last-child {
   display: block;
-}
+ }
 *{
   margin: 0;
   padding: 0;
