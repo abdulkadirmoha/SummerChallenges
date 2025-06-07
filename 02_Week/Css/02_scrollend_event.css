@@ -1,0 +1,23 @@
+body {
+    margin: 0 auto;
+}
+.box-wrapper , .box{
+    margin: 10px;
+}
+.box-wrapper {
+  width: 600px;
+  border: 4px dotted;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 4px dotted;
+  border-radius: 10px;
+}
+
+#output {
+  text-align: center;
+  font-size: 1.2em;
+
+}
