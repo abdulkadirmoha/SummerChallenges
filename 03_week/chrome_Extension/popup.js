@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let opportunities = [];
 
-  // Load existing opportunities from local storage
   const oppsFromLocalStorage = JSON.parse(
     localStorage.getItem("opportunities")
   );
@@ -20,7 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
     renderOpportunities();
   }
 
-  // Form submit handler
+  linkedinUrlInput.addEventListener("click", function () {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      linkedinUrlInput.value = tabs[0].url;
+    });
+  });
+
   opportunityForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -38,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     opportunityForm.reset();
   });
 
-  // Double-click to delete all opportunities
   deleteBtn.addEventListener("dblclick", function () {
     localStorage.clear();
     opportunities = [];
@@ -47,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "No opportunities saved yet. Start adding some above!";
   });
 
-  // Render function to display opportunities
   function renderOpportunities() {
     opportunityList.innerHTML = "";
 
