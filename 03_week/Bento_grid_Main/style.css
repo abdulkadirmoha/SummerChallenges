@@ -1,0 +1,331 @@
+@font-face {
+    font-family: "DM Sans";
+    font-weight: 400 500;
+    src: url("../Bento_grid_Main/assets/fonts/DMSans-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: "DM Sans";
+    font-style: italic;
+    font-weight: 400 500;
+    src: url("../Bento_grid_Main/assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf");
+}
+
+:root {
+    --primary-subdued: hsl(254 88% 90%);
+    --primary-base: hsl(256 67% 59%);
+    --accent-subdued: hsl(31 66% 93%);
+    --accent-base: hsl(39 100% 71%);
+    --white: hsl(0 0% 100%);
+    --off-white: hsl(0 0% 96%);
+    --black: hsl(0 0% 7%);
+
+    --fs-reg: 1.35rem;
+    --fs-md: 2.25rem;
+    --fs-lg: 3rem;
+    --fs-xl: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    margin: 32px;
+    color: var(--black);
+    font-size: var(--fs-reg);
+    background: var(--off-white);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    color: var(--heading-text-color, inherit);
+    font-size: var(--heading-font-size, var(--fs-md));
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+.bento-grid {
+    display: grid;
+    gap: 24px;
+    max-inline-size: 1200px;
+    margin: auto;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six'
+        'seven'
+        'eight';
+}
+
+@media (width > 960px) {
+    .bento-grid {
+        grid-template-areas:
+            "seven one one four"
+            "seven two three four"
+            "eight two three four"
+            "eight six five five";
+    }
+}
+
+.bento-grid > * {
+    display: grid;
+    gap: 32px;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 32px;
+    border-radius: 21px;
+    overflow: clip;
+}
+
+/* Section 1 */
+.bento-grid > :nth-child(1) {
+    background-color: var(--primary-base);
+    color: var(--white);
+    justify-items: center;
+    text-align: center;
+    padding: 46px;
+    gap: 14px;
+    grid-area: one;
+}
+
+.bento-grid > :nth-child(1) > img {
+    max-width: 70%;
+    margin-top: 16px;
+}
+
+@media (width > 960px) {
+    .bento-grid > :nth-child(1) > img {
+        max-width: 45%;
+    }
+}
+
+.bento-grid > :nth-child(1) span {
+    color: var(--accent-base);
+    font-weight: 700;
+}
+
+.bento-grid > :nth-child(1) h1 {
+    font-size: var(--fs-xl);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.bento-grid > :nth-child(1) p {
+    font-size: 1.3rem;
+    color: var(--primary-subdued);
+    opacity: 0.9;
+}
+
+/* Section 2 */
+.bento-grid > :nth-child(2) {
+    grid-area: two;
+}
+
+.bento-grid > :nth-child(2) > img {
+    order: -1;
+    filter: drop-shadow(0 0 1rem hsl(0 0% 0% / .25));
+    border-radius: 100vw;
+}
+
+@media (width > 960px) {
+    .bento-grid > :nth-child(2) > img {
+        max-width: 150%;
+    }
+}
+
+.bento-grid > :nth-child(2) h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Section 3 */
+.bento-grid > :nth-child(3) {
+    background-color: var(--accent-base);
+    grid-area: three;
+}
+
+.bento-grid > :nth-child(3) h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.bento-grid > :nth-child(3) > img {
+    width: 65%;
+    margin-bottom: -55px;
+}
+
+@media (width > 960px) {
+    .bento-grid > :nth-child(3) > img {
+        max-width: 100%;
+        margin-bottom: -125px;
+    }
+}
+
+/* Section 4 */
+.bento-grid > :nth-child(4) {
+    background-color: var(--primary-subdued);
+    margin-top: 8px;
+    justify-items: center;
+    grid-area: four;
+}
+
+.bento-grid > :nth-child(4) > img {
+    max-width: 85%;
+}
+
+@media (width > 960px) {
+    .bento-grid > :nth-child(4) {
+        justify-items: start;
+        text-align: start;
+        align-items: center;
+        align-content: center;
+    }
+
+    .bento-grid > :nth-child(4) > img {
+        max-width: 180%;
+    }
+}
+
+.bento-grid > :nth-child(4) h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.bento-grid > :nth-child(4) p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Section 5 */
+.bento-grid > :nth-child(5) {
+    background-color: var(--primary-base);
+    color: var(--white);
+    text-align: center;
+    justify-items: center;
+    grid-area: five;
+}
+
+.bento-grid > :nth-child(5) > img {
+    width: 75%;
+    order: -1;
+}
+
+.bento-grid > :nth-child(5) h2 {
+    font-size: var(--fs-md);
+    font-weight: 500;
+}
+
+@media (width > 960px) {
+    .bento-grid > :nth-child(5) {
+        gap: 16px;
+        align-items: center;
+        align-content: center;
+        justify-content: start;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bento-grid > :nth-child(5) > img {
+        max-width: 100%;
+    }
+}
+
+/* Section 6 */
+.bento-grid > :nth-child(6) {
+    font-size: var(--fs-lg);
+    font-weight: 500;
+    grid-area: six;
+}
+
+.bento-grid > :nth-child(6) > img {
+    width: 55%;
+}
+
+.bento-grid > :nth-child(6) span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1.3;
+}
+
+@media (width > 960px) {
+    .bento-grid > :nth-child(6) > img {
+        max-width: 80%;
+    }
+}
+
+/* Section 7 */
+.bento-grid > :nth-child(7) {
+    background-color: var(--accent-subdued);
+    grid-area: seven;
+}
+
+.bento-grid > :nth-child(7) > img {
+    width: 60%;
+}
+
+.bento-grid > :nth-child(7) h2 {
+    font-weight: 500;
+    font-size: var(--fs-md);
+}
+
+.bento-grid > :nth-child(7) span {
+    color: var(--primary-base);
+    font-style: italic;
+}
+
+@media (width > 960px) {
+    .bento-grid > :nth-child(7) {
+        align-items: center;
+        align-content: center;
+    }
+
+    .bento-grid > :nth-child(7) > img {
+        max-width: 100%;
+    }
+}
+
+/* Section 8 */
+.bento-grid > :nth-child(8) {
+    background-color: var(--accent-base);
+    grid-area: eight;
+}
+
+.bento-grid > :nth-child(8) > img {
+    width: 65%;
+}
+
+.bento-grid > :nth-child(8) h2 {
+    font-weight: 500;
+    font-size: var(--fs-md);
+    line-height: 1;
+}
+
+@media (width > 960px) {
+    .bento-grid > :nth-child(8) {
+        align-items: center;
+        align-content: center;
+    }
+
+    .bento-grid > :nth-child(8) > img {
+        max-width: 105%;
+    }
+}
