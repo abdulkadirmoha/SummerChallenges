@@ -1,12 +1,14 @@
 :root {
-    --color-blue-900: hsl(233 54% 16%);
-    --color-blue-600: hsl(234 25% 52%);
-    --color-pink-600: hsl(341 92% 62%);
-    --color-pink-300: hsl(341 100% 83%);
-    --color-grey: hsl(232 10% 56%);
-    --color-white: hsl(0 0% 100%);
-    --color-gradient-pink: linear-gradient(hsl(13 100% 64%), hsl(322 87% 55%));
-    --color-gradient-purple: linear-gradient(hsl(237 100% 64%), hsl(322 87% 55%));
+  /* Light mode colors */
+  --color-blue-900: hsl(233 54% 16%);
+  --color-blue-600: hsl(234 25% 52%);
+  --color-pink-600: hsl(341 92% 62%);
+  --color-pink-300: hsl(341 100% 83%);
+  --color-grey: hsl(232 10% 56%);
+  --color-white: hsl(0 0% 100%);
+  --color-bg: var(--color-white);
+  --color-gradient-pink: linear-gradient(hsl(13 100% 64%), hsl(322 87% 55%));
+  --color-gradient-purple: linear-gradient(hsl(237 100% 64%), hsl(322 87% 55%));
 }
 
 :root {
@@ -19,7 +21,7 @@
   --fs-7: 1.125rem;                     /* Button text or secondary */
 }
 main {
-  overflow-x: clip;
+    overflow-x: clip;
 }
 *,
 *::before,

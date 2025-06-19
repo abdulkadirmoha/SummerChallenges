@@ -1,0 +1,72 @@
+:root {
+    --color-light: lightgray;
+    --color-dark: darkgray;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+.circle-container, 
+.square-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #000;
+    margin: 0.8em;
+    border-radius: 15px;
+    animation: pursle alternate infinite 1s;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    margin: 0.8em;
+    animation: rotate 1s infinite linear;
+}
+.square1 {
+    background-color: red;
+}
+.square2 {
+    background-color: darkcyan;
+}
+.square3 {
+    background-color: blue;
+}
+
+
+@keyframes pursle {
+    from  {
+        background-color: lightblue;
+    }
+    
+    to {
+        background-color: lightcoral;
+        height: 1.6em;
+        width: 1.6em;
+    }
+}
+
+@keyframes rotate {
+   0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
