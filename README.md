@@ -1,32 +1,30 @@
-# 🌞 Summer Dev Challenges 2025
+# 🌞 Summer Dev Challenge 2025  
 
-This repo documents my personal coding journey through **June and July 2025** as part of my summer development challenge. The goal: **build daily or weekly mini projects** to sharpen my HTML, CSS, and JavaScript skills.
+This repo documents my **2-month coding challenge (June–July 2025)** where I committed to **at least 2 hours of coding every day**.  
+The focus: sharpening my **HTML, CSS, and JavaScript** skills by building mini projects, redoing bootcamp exercises, and tackling Frontend Mentor challenges.  
 
-## 📍 Context
+---
 
-I'm currently studying at **Helsinki Business College**, and these projects are a mix of:
+## 📍 Context  
+I’m currently studying **Frontend Development at Helsinki Business College**, and this challenge is part of my personal growth plan.  
+My projects are a mix of:  
+- 🏫 School exercises  
+- 🎯 Frontend Mentor challenges  
+- 🔁 Rebuilt bootcamp projects  
+- 💡 Self-led UI and component practice  
 
-* 🏫 **School assignments**
-* 🧠 **Self-led learning challenges**
-* 💡 **UI practice and frontend skills improvement**
+---
 
-## 🚧 Structure
+## 🛠 Tech Stack  
+- **HTML5**  
+- **CSS3** (Flexbox, Grid, Responsive Design)  
+- **JavaScript** (DOM, Events, Interactivity)  
 
-Each week focuses on a specific theme:
+---
 
-* **Week 1:** HTML + CSS basics (cards, navbars, layouts)
-* **Week 2:** CSS layout + JavaScript DOM interaction
-* **Week 3+**: More advanced interactivity, animations, and real-world component builds
-
-## 🛠 Tech Stack
-
-* HTML5
-* CSS3 (Flexbox, Grid, Responsive Design)
-* JavaScript (DOM, Events, Interactivity)
-
-## ✅ Goals
-
-* Practice **building without tutorials**
-* Improve **responsive design**
-* Build a portfolio of **clean, reusable components**
-* Document progress for personal growth and feedback
+## ✅ Goals  
+- Code **daily for 2+ hours**  
+- Build without relying on tutorials  
+- Improve responsive design & clean UI  
+- Create a portfolio of **reusable frontend components**  
+- Document progress for **growth & feedback**  
